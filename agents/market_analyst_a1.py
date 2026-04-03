@@ -1,13 +1,11 @@
 from pydantic import Json
 from agents.base import BaseAgent
-from consts import AvailableModels
+from models.market_analyst_resp import MarketAnalizerResponse
 
 
 class MarketAnalyst(BaseAgent):
-    def __init__(
-        self, model: str = AvailableModels.QWEN, name: str = "MarketAnalyst"
-    ) -> None:
-        super().__init__(model, name)
+    def __init__(self) -> None:
+        super().__init__(MarketAnalizerResponse, name="MarketAnalyst")
 
     def build_prompt(self, input_data: str | Json) -> str:
         return f"Проанализируй IT-специальность: {input_data}"
@@ -33,10 +31,10 @@ class MarketAnalyst(BaseAgent):
             {
             "role": "название роли",
             "skill_map": {
-                "languages": [{"name": "...", "demand": "...", "trend": "..."}, ...],
-                "frameworks": [{"name": "...", "demand": "...", "trend": "..."}, ...],
-                "infrastructure": [{"name": "...", "demand": "...", "trend": "..."}, ...],
-                "soft_skills": [{"name": "...", "demand": "...", "trend": "..."}, ...]
+                "languages": [{"name": "...", "importance": "...", "trend": "..."}, ...],
+                "frameworks": [{"name": "...", "importance": "...", "trend": "..."}, ...],
+                "infrastructure": [{"name": "...", "importance": "...", "trend": "..."}, ...],
+                "soft_skills": [{"name": "...", "importance": "...", "trend": "..."}, ...]
             },
             "market_trend_reason": "..."
             }

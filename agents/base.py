@@ -4,10 +4,11 @@ import os
 
 import logging
 from abc import ABC, abstractmethod
-from openai import OpenAI, max_retries
+from openai import OpenAI
 from dotenv import load_dotenv
 from pydantic import Json
 from datetime import UTC, datetime
+import instructor
 
 from consts import AvailableModels
 
@@ -18,21 +19,38 @@ logging.basicConfig(level=logging.DEBUG)
 logging.getLogger("openai").setLevel(logging.WARNING)
 logging.getLogger("httpcore").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("instructor").setLevel(logging.WARNING)
 
 
 class BaseAgent(ABC):
     """Начальная логика для Агентов."""
 
-    def __init__(self, model: str = AvailableModels.QWEN, name: str = "BASE_AGENT") -> None:
-        """Обычный инициализатор."""
+    def __init__(
+            self, resp_model, model: str = AvailableModels.QWEN, name: str = "BASE_AGENT", retries: int = 5
+    ) -> None:
+        """
+        Обычный инициализатор.
+
+        :param resp_model: модель по которой будет формироваться ответ от Агента.
+        :param model: модель для обработки запроса.
+        :param name: имя агента, которое будет использоваться в логах.
+        :param retries: кол-во попыток, которое модель будет пытаться
+        генерить ответ в соответствии со схемой Pydantic.
+        """
         self.model: str = model
         self.api_key: str = os.getenv("AI_API_KEY", "ollama")
-        self.client = OpenAI(api_key=self.api_key, base_url="http://localhost:11434/v1")
+
+        self.resp_model = resp_model
+        self.retries: int = retries
         self.agent_name: str = name
+        self.client = instructor.from_openai(
+            OpenAI(api_key=self.api_key, base_url="http://localhost:11434/v1"),
+            mode=instructor.Mode.JSON
+        )
 
     @property
     @abstractmethod
-    def system_prompt(self) -> str:
+    def system_prompt(self):
         """Системный промпт c ролью и заданием для агента."""
 
     @abstractmethod
@@ -45,44 +63,36 @@ class BaseAgent(ABC):
         :return строка с ответом.
         """
 
-    def call_llm(self, user_prompt: str) -> str:
+    def call_llm(self, user_prompt: str):
         """
         Вызов модели и получение сырого ответа.
 
         :param user_prompt: подготовленный и преобразованный запрос пользователя.
-        :return: сырой формат ответа модели.
+        :return: ответ от агента в определённом формате.
         """
-        response = self.client.chat.completions.create(
+        response = self.client.chat.completions.create(  # type: ignore
             model=self.model,
             max_tokens=4096,
             messages=[{"role": "system", "content": self.system_prompt()}, {"role": "user", "content": user_prompt}],
-            stream=False,
+            response_model=self.resp_model,
+            max_retries=self.retries,
         )
 
-        return response.choices[0].message.content
+        return response
 
-    def convert_to_json(self, data: str) -> dict:
-        print(data)
-
-
-    def response_parser(self, raw_data: str):
-        data = self.convert_to_json(raw_data)
-
-    def run(self, input_data: str | Json, retries: int = 5) -> dict | Exception:
+    def run(self, input_data: str | Json) -> dict | Exception:
         """
         Механизм для запуска агентов.
 
         :param input_data: для первого агента это строка с названием должности,
         для следующих это JSON от прошлого агента.
-        :param retries: кол-во попыток, которое модель будет пытаться
-        генерить ответ в соответствии со схемой Pydantic.
         :return словарик с ответом от модели.
         """
         user_prompt = self.build_prompt(input_data)
         last_wrong = None
 
-        for attempt in range(1, retries + 1):
-            logger.info(f"[{self.agent_name}] Попытка {attempt}/{retries}")
+        for attempt in range(1, self.retries + 1):
+            logger.info(f"[{self.agent_name}] Попытка {attempt}/{self.retries}")
 
             prompt: str = user_prompt
             if last_wrong:
@@ -92,12 +102,7 @@ class BaseAgent(ABC):
                 )
 
             try:
-                raw_resp = self.call_llm(prompt)
-                logger.debug(f"[{self.agent_name}] Сырой ответ агента {raw_resp}")
-
-                # успешная попытка None проблема в parser
-                response = self.response_parser(raw_resp)
-
+                response = self.call_llm(prompt)
                 logger.info(f"[{self.agent_name}] Успешная попытка. {response}")
                 return {
                     "agent": self.agent_name,
@@ -111,5 +116,5 @@ class BaseAgent(ABC):
                 )
 
         raise RuntimeError(
-            f"[{self.agent_name}] Не смог создать валидный ответ за {max_retries} попыток."
+            f"[{self.agent_name}] Не смог создать валидный ответ за {self.retries} попыток."
         )

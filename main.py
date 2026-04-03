@@ -18,6 +18,6 @@ def parse_args() -> argparse.Namespace:
 
 
 if __name__ == "__main__":
-    # args = parse_args()
+    args = parse_args()
     agent = MarketAnalyst()
-    agent.run("Python Backend Dev")
+    print(agent.run("Python Backend Dev"))
