@@ -1,0 +1,323 @@
+{
+  "generated_at": "2026-04-03T18:14:11.252933+00:00",
+  "role": "Backend Python Developer",
+  "market_analyst": {
+    "agent": "MarketAnalyst",
+    "generated_at": "2026-04-03T18:11:57.779724+00:00",
+    "data": {
+      "job_title": "Backend Python Developer",
+      "skill_map": {
+        "languages": [
+          {
+            "name": "Python",
+            "importance": "critical",
+            "trend": "growing"
+          },
+          {
+            "name": "Django",
+            "importance": "important",
+            "trend": "stable"
+          },
+          {
+            "name": "Flask",
+            "importance": "important",
+            "trend": "stable"
+          }
+        ],
+        "frameworks": [
+          {
+            "name": "REST API",
+            "importance": "critical",
+            "trend": "growing"
+          },
+          {
+            "name": "GraphQL",
+            "importance": "important",
+            "trend": "growing"
+          },
+          {
+            "name": "Celery",
+            "importance": "nice-to-have",
+            "trend": "stable"
+          }
+        ],
+        "infrastructure": [
+          {
+            "name": "Docker",
+            "importance": "critical",
+            "trend": "growing"
+          },
+          {
+            "name": "Kubernetes",
+            "importance": "important",
+            "trend": "growing"
+          },
+          {
+            "name": "Amazon Web Services (AWS)",
+            "importance": "important",
+            "trend": "stable"
+          }
+        ],
+        "soft_skills": [
+          {
+            "name": "Problem-solving",
+            "importance": "critical",
+            "trend": "stable"
+          },
+          {
+            "name": "Communication",
+            "importance": "important",
+            "trend": "stable"
+          },
+          {
+            "name": "Teamwork",
+            "importance": "important",
+            "trend": "stable"
+          }
+        ]
+      },
+      "market_trend_reason": "The demand for backend developers skilled in Python is growing due to its versatility and the popularity of frameworks like Django and Flask. Infrastructure skills, particularly with Docker and Kubernetes, are also vital as microservices architecture becomes more prevalent. Soft skills remain important but are less likely to change significantly."
+    }
+  },
+  "salary_estimator": {
+    "agent": "SalaryEstimator",
+    "generated_at": "2026-04-03T18:12:43.024105+00:00",
+    "data": {
+      "salary_table": {
+        "junior": {
+          "russian_province": {
+            "min_income": 150000,
+            "median_income": 170000,
+            "max_income": 200000
+          },
+          "moscow": {
+            "min_income": 220000,
+            "median_income": 240000,
+            "max_income": 280000
+          },
+          "remote_jobs": {
+            "min_income": 1200,
+            "median_income": 1500,
+            "max_income": 1800
+          }
+        },
+        "middle": {
+          "russian_province": {
+            "min_income": 300000,
+            "median_income": 350000,
+            "max_income": 400000
+          },
+          "moscow": {
+            "min_income": 400000,
+            "median_income": 450000,
+            "max_income": 520000
+          },
+          "remote_jobs": {
+            "min_income": 2500,
+            "median_income": 3000,
+            "max_income": 3500
+          }
+        },
+        "senior": {
+          "russian_province": {
+            "min_income": 450000,
+            "median_income": 550000,
+            "max_income": 620000
+          },
+          "moscow": {
+            "min_income": 700000,
+            "median_income": 850000,
+            "max_income": 950000
+          },
+          "remote_jobs": {
+            "min_income": 3500,
+            "median_income": 4500,
+            "max_income": 5200
+          }
+        },
+        "lead": {
+          "russian_province": {
+            "min_income": 700000,
+            "median_income": 850000,
+            "max_income": 950000
+          },
+          "moscow": {
+            "min_income": 1000000,
+            "median_income": 1200000,
+            "max_income": 1400000
+          },
+          "remote_jobs": {
+            "min_income": 6000,
+            "median_income": 7500,
+            "max_income": 9000
+          }
+        }
+      },
+      "market_trend": {
+        "trend": "growing",
+        "reason": "Growing demand for backend developers in Python is driven by the increasing adoption of cloud services and microservices architecture. The stability of projects and the continuous development of the tech stack contribute to sustained growth."
+      },
+      "top_employers": [
+        "Yandex",
+        "Sber",
+        "Mail.ru Group",
+        "TCS Russia"
+      ]
+    }
+  },
+  "career_advisor": {
+    "agent": "CareerAdvisor",
+    "generated_at": "2026-04-03T18:13:49.891164+00:00",
+    "data": {
+      "learning_path": [
+        {
+          "stage": "Foundation",
+          "topics": [
+            {
+              "theme": "Python Fundamentals and Django Basics",
+              "resources": [
+                {
+                  "name": "Automate the Boring Stuff with Python (book)",
+                  "type": "book"
+                },
+                {
+                  "name": "Official Django Documentation",
+                  "type": "documentation"
+                }
+              ]
+            },
+            {
+              "theme": "Docker and Kubernetes Basics",
+              "resources": [
+                {
+                  "name": "Learn Docker by Example (course)",
+                  "type": "course"
+                },
+                {
+                  "name": "Kubernetes - What You Need to Know (tutorial) ",
+                  "type": "tutorial"
+                }
+              ]
+            }
+          ],
+          "milestone": "Create a simple Django application containerized with Docker and deployed on Kubernetes."
+        },
+        {
+          "stage": "Practice",
+          "topics": [
+            {
+              "theme": "Advanced Python Programming",
+              "resources": [
+                {
+                  "name": "Eloquent JavaScript (2nd Edition) (book)",
+                  "type": "book"
+                },
+                {
+                  "name": "Python Concurrency with Gevent and Greenlets course",
+                  "type": "course"
+                }
+              ]
+            },
+            {
+              "theme": "AWS Basics & Security",
+              "resources": [
+                {
+                  "name": "AWS Certified Solutions Architect - Associate (tutorial) ",
+                  "type": "tutorial"
+                },
+                {
+                  "name": "Securing AWS Applications course",
+                  "type": "course"
+                }
+              ]
+            }
+          ],
+          "milestone": "Deploy a Django application on Amazon Web Services with security best practices."
+        },
+        {
+          "stage": "Portfolio",
+          "topics": [
+            {
+              "theme": "Building REST APIs and GraphQL Integrations",
+              "resources": [
+                {
+                  "name": "Mastering GraphQL book by Ahmed Elmahmoudy",
+                  "type": "book"
+                },
+                {
+                  "name": "Designing Data-Intensive Applications (chapter on API design) (book)",
+                  "type": "book"
+                }
+              ]
+            },
+            {
+              "theme": "Case Study to Showcase Skills",
+              "resources": [
+                {
+                  "name": "GitHub Case Studies for Tech Interviews (tutorial) ",
+                  "type": "tutorial"
+                },
+                {
+                  "name": "Building a Full-Stack Application on Django and AWS case study guide on Medium",
+                  "type": "site"
+                }
+              ]
+            }
+          ],
+          "milestone": "Complete a full-stack project that includes Python, REST API, GraphQL, and deployment on Docker & Kubernetes."
+        }
+      ],
+      "gap_analysis": {
+        "quick_wins": [
+          {
+            "skill": "Celery",
+            "description": "Implement background tasks with Celery in Django application"
+          },
+          {
+            "skill": "Python Data Classes",
+            "description": "Migrate to Python dataclasses for improved data handling and API development"
+          }
+        ],
+        "long_term": [
+          {
+            "skill": "Full-stack development with Flask",
+            "description": "Develop a production-ready full-stack application using Flask and React on the frontend"
+          },
+          {
+            "skill": "AWS Lambda & Serverless Architecture",
+            "description": "Learn to build serverless APIs using AWS Lambda for efficient scaling and cost management"
+          }
+        ]
+      },
+      "portfolio_project": {
+        "title": "Real Estate Pricing Predictor",
+        "description": "A web app that predicts housing prices in major Russian cities utilizing machine learning models. The backend is built with Django API, REST API principles, and deployed on AWS. The frontend showcases live data visualizations using Flask to create a seamless user experience.",
+        "skills_demonstrated": [
+          "Python",
+          "Django",
+          "REST API",
+          "Full-Stack Development",
+          "AWS"
+        ]
+      }
+    }
+  },
+  "critic_verifier": {
+    "agent": "CriticVerifier",
+    "generated_at": "2026-04-03T18:14:11.252891+00:00",
+    "data": {
+      "score": {
+        "quality_index": 90,
+        "reason": "salary ranges correlate well with skill demand levels, learning_path is relevant and realistic, but 'Celery' should not be prioritized as a Foundation topic given its less critical nature."
+      },
+      "is_consistent": false,
+      "warnings": [
+        {
+          "field": "skill_map.frameworks.Celery",
+          "severity": "critical",
+          "message": "Celery, marked as 'nice-to-have' in skill_map, is included as a Foundation priority topic in the learning_path."
+        }
+      ]
+    }
+  }
+}

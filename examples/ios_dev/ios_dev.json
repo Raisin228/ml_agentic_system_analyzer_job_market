@@ -1,0 +1,315 @@
+{
+  "generated_at": "2026-04-03T18:24:33.724781+00:00",
+  "role": "iOS Developer (Swift)",
+  "market_analyst": {
+    "agent": "MarketAnalyst",
+    "generated_at": "2026-04-03T18:22:25.960363+00:00",
+    "data": {
+      "job_title": "iOS Developer (Swift)",
+      "skill_map": {
+        "languages": [
+          {
+            "name": "Swift",
+            "importance": "critical",
+            "trend": "growing"
+          },
+          {
+            "name": "Objective-C",
+            "importance": "important",
+            "trend": "stable"
+          },
+          {
+            "name": "Java",
+            "importance": "nice-to-have",
+            "trend": "declining"
+          }
+        ],
+        "frameworks": [
+          {
+            "name": "UIKit",
+            "importance": "critical",
+            "trend": "growing"
+          },
+          {
+            "name": "Combine",
+            "importance": "important",
+            "trend": "growing"
+          },
+          {
+            "name": "Core Data",
+            "importance": "important",
+            "trend": "stable"
+          }
+        ],
+        "infrastructure": [
+          {
+            "name": "Xcode",
+            "importance": "critical",
+            "trend": "stable"
+          },
+          {
+            "name": "Bitrise",
+            "importance": "important",
+            "trend": "growing"
+          },
+          {
+            "name": "CocoaPods",
+            "importance": "important",
+            "trend": "stable"
+          }
+        ],
+        "soft_skills": [
+          {
+            "name": "Problem-solving",
+            "importance": "critical",
+            "trend": "stable"
+          },
+          {
+            "name": "Attention to detail",
+            "importance": "important",
+            "trend": "stable"
+          },
+          {
+            "name": "Team collaboration",
+            "importance": "important",
+            "trend": "growing"
+          }
+        ]
+      },
+      "market_trend_reason": "Due to the increasing adoption of Apple's ecosystem and the growing complexity of cross-platform app development, relevant skills in Swift and associated frameworks like Combine are in high demand. The trend towards mobile-first application strategies also drives the need for up-to-date knowledge in these areas."
+    }
+  },
+  "salary_estimator": {
+    "agent": "SalaryEstimator",
+    "generated_at": "2026-04-03T18:23:11.223007+00:00",
+    "data": {
+      "salary_table": {
+        "junior": {
+          "russian_province": {
+            "min_income": 250000,
+            "median_income": 300000,
+            "max_income": 400000
+          },
+          "moscow": {
+            "min_income": 350000,
+            "median_income": 450000,
+            "max_income": 600000
+          },
+          "remote_jobs": {
+            "min_income": 1200,
+            "median_income": 1500,
+            "max_income": 2000
+          }
+        },
+        "middle": {
+          "russian_province": {
+            "min_income": 400000,
+            "median_income": 500000,
+            "max_income": 700000
+          },
+          "moscow": {
+            "min_income": 600000,
+            "median_income": 800000,
+            "max_income": 1200000
+          },
+          "remote_jobs": {
+            "min_income": 3500,
+            "median_income": 4500,
+            "max_income": 6000
+          }
+        },
+        "senior": {
+          "russian_province": {
+            "min_income": 600000,
+            "median_income": 800000,
+            "max_income": 1200000
+          },
+          "moscow": {
+            "min_income": 900000,
+            "median_income": 1300000,
+            "max_income": 1800000
+          },
+          "remote_jobs": {
+            "min_income": 6500,
+            "median_income": 8500,
+            "max_income": 12000
+          }
+        },
+        "lead": {
+          "russian_province": {
+            "min_income": 900000,
+            "median_income": 1400000,
+            "max_income": 2000000
+          },
+          "moscow": {
+            "min_income": 1200000,
+            "median_income": 2000000,
+            "max_income": 3000000
+          },
+          "remote_jobs": {
+            "min_income": 9500,
+            "median_income": 14000,
+            "max_income": 20000
+          }
+        }
+      },
+      "market_trend": {
+        "trend": "growing",
+        "reason": "The demand for iOS developers with Swift skills is increasing due to the expanding number of mobile apps and the continued development in tech advancements."
+      },
+      "top_employers": [
+        "Apple",
+        "Mail.ru Group",
+        "Yandex",
+        "Google"
+      ]
+    }
+  },
+  "career_advisor": {
+    "agent": "CareerAdvisor",
+    "generated_at": "2026-04-03T18:24:17.103208+00:00",
+    "data": {
+      "learning_path": [
+        {
+          "stage": "Foundation",
+          "topics": [
+            {
+              "theme": "Swift Fundamentals",
+              "resources": [
+                {
+                  "name": "Swift Programming: The Big Nerd Ranch Guide",
+                  "type": "book"
+                },
+                {
+                  "name": "Apple Swift Development (4th Edition)",
+                  "type": "course"
+                }
+              ]
+            },
+            {
+              "theme": "UIKit",
+              "resources": [
+                {
+                  "name": "Developing iOS 13 Apps with Swift, Fifth Edition",
+                  "type": "book"
+                },
+                {
+                  "name": "iOS Application Development Step-by-Step (4th Edition)",
+                  "type": "course"
+                }
+              ]
+            }
+          ],
+          "milestone": "Create a basic iOS app using UIKit and Swift."
+        },
+        {
+          "stage": "Practice",
+          "topics": [
+            {
+              "theme": "Combine Framework",
+              "resources": [
+                {
+                  "name": "Using Combine in iOS",
+                  "type": "tutorial"
+                },
+                {
+                  "name": "Combine: A Better Way to Handle Data Streams and Asynchronous Programming with Swift",
+                  "type": "book"
+                }
+              ]
+            },
+            {
+              "theme": "Xcode Features",
+              "resources": [
+                {
+                  "name": "Mastering Xcode 13",
+                  "type": "course"
+                },
+                {
+                  "name": "Xcode - The Official Guide (2022)",
+                  "type": "book"
+                }
+              ]
+            }
+          ],
+          "milestone": "Implement an app using Combine, ensuring good integration with UIKit."
+        },
+        {
+          "stage": "Portfolio",
+          "topics": [
+            {
+              "theme": "Advanced Swift Techniques",
+              "resources": [
+                {
+                  "name": "High Performance Swift: The Developer's Guide to Advanced Code Optimization and Best Practices for Writing Swift Code.",
+                  "type": "book"
+                },
+                {
+                  "name": "Effective Objective-C Patterns and Idioms",
+                  "type": "course"
+                }
+              ]
+            },
+            {
+              "theme": "Real-World Project",
+              "resources": [
+                {
+                  "name": "Building Native iOS Apps From Scratch: A Beginner’s Guide to Swift",
+                  "type": "tutorial"
+                },
+                {
+                  "name": "iOS 15 and Xcode 13 - Everything You Need To Know in One Course",
+                  "type": "course"
+                }
+              ]
+            }
+          ],
+          "milestone": "Contribute a significant section to an open-source project on GitHub, demonstrating advanced Swift skills."
+        }
+      ],
+      "gap_analysis": {
+        "quick_wins": [
+          {
+            "skill": "Advanced UIKit",
+            "description": "Implement complex user interfaces and transitions in iOS applications using advanced UIKit features"
+          },
+          {
+            "skill": "Swift Package Manager",
+            "description": "Create, manage, and integrate Swift packages into projects"
+          }
+        ],
+        "long_term": [
+          {
+            "skill": "Machine Learning with Core ML and SwiftUI",
+            "description": "Understand and implement machine learning using Core ML with SwiftUI for creating interactive apps"
+          },
+          {
+            "skill": "SwiftUI Fundamentals",
+            "description": "Master the creation, layout, animations, and state management in SwiftUI for building modern iOS applications"
+          }
+        ]
+      },
+      "portfolio_project": {
+        "title": "Fitness Tracker App with Notifications",
+        "description": "Develop a fitness tracker app that uses Core Data for persistence, Combine for handling user input and notifications, and UIKit for the UI. Integrate machine learning to predict heart rate based on activity data.",
+        "skills_demonstrated": [
+          "UIKit",
+          "Combine Framework",
+          "Core Data"
+        ]
+      }
+    }
+  },
+  "critic_verifier": {
+    "agent": "CriticVerifier",
+    "generated_at": "2026-04-03T18:24:33.724762+00:00",
+    "data": {
+      "score": {
+        "quality_index": 93,
+        "reason": "Salary ranges are well aligned with skill demand levels, learning resources are relevant, and there are no critical contradictions."
+      },
+      "is_consistent": true,
+      "warnings": []
+    }
+  }
+}

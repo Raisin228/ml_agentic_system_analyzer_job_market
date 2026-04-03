@@ -1,0 +1,322 @@
+{
+  "generated_at": "2026-04-03T18:18:25.379166+00:00",
+  "role": "ML Engineer",
+  "market_analyst": {
+    "agent": "MarketAnalyst",
+    "generated_at": "2026-04-03T18:16:12.806270+00:00",
+    "data": {
+      "job_title": "ML Engineer",
+      "skill_map": {
+        "languages": [
+          {
+            "name": "Python",
+            "importance": "critical",
+            "trend": "growing"
+          },
+          {
+            "name": "R",
+            "importance": "important",
+            "trend": "stable"
+          },
+          {
+            "name": "Julia",
+            "importance": "nice-to-have",
+            "trend": "growing"
+          }
+        ],
+        "frameworks": [
+          {
+            "name": "TensorFlow",
+            "importance": "critical",
+            "trend": "stable"
+          },
+          {
+            "name": "PyTorch",
+            "importance": "critical",
+            "trend": "growing"
+          },
+          {
+            "name": "Scikit-learn",
+            "importance": "important",
+            "trend": "stable"
+          }
+        ],
+        "infrastructure": [
+          {
+            "name": "AWS Sagemaker",
+            "importance": "important",
+            "trend": "stable"
+          },
+          {
+            "name": "Google Cloud AI Platform",
+            "importance": "important",
+            "trend": "growing"
+          },
+          {
+            "name": "Azure ML",
+            "importance": "important",
+            "trend": "stable"
+          }
+        ],
+        "soft_skills": [
+          {
+            "name": "Problem-solving skills",
+            "importance": "critical",
+            "trend": "stable"
+          },
+          {
+            "name": "Data analysis",
+            "importance": "critical",
+            "trend": "growing"
+          },
+          {
+            "name": "Communication skills",
+            "importance": "important",
+            "trend": "stable"
+          }
+        ]
+      },
+      "market_trend_reason": "The demand for ML Engineers continues to grow due to the increasing importance of AI in businesses. Popular frameworks like TensorFlow and PyTorch are stabilizing, while new ones like Julia are gaining traction. Infrastructure tools are also growing as companies expand their use of cloud services."
+    }
+  },
+  "salary_estimator": {
+    "agent": "SalaryEstimator",
+    "generated_at": "2026-04-03T18:16:57.036100+00:00",
+    "data": {
+      "salary_table": {
+        "junior": {
+          "russian_province": {
+            "min_income": 20000,
+            "median_income": 35000,
+            "max_income": 45000
+          },
+          "moscow": {
+            "min_income": 40000,
+            "median_income": 60000,
+            "max_income": 75000
+          },
+          "remote_jobs": {
+            "min_income": 1200,
+            "median_income": 1800,
+            "max_income": 2200
+          }
+        },
+        "middle": {
+          "russian_province": {
+            "min_income": 40000,
+            "median_income": 70000,
+            "max_income": 95000
+          },
+          "moscow": {
+            "min_income": 80000,
+            "median_income": 120000,
+            "max_income": 150000
+          },
+          "remote_jobs": {
+            "min_income": 3000,
+            "median_income": 4500,
+            "max_income": 6000
+          }
+        },
+        "senior": {
+          "russian_province": {
+            "min_income": 70000,
+            "median_income": 120000,
+            "max_income": 180000
+          },
+          "moscow": {
+            "min_income": 140000,
+            "median_income": 210000,
+            "max_income": 290000
+          },
+          "remote_jobs": {
+            "min_income": 5500,
+            "median_income": 8000,
+            "max_income": 11000
+          }
+        },
+        "lead": {
+          "russian_province": {
+            "min_income": 120000,
+            "median_income": 210000,
+            "max_income": 340000
+          },
+          "moscow": {
+            "min_income": 210000,
+            "median_income": 350000,
+            "max_income": 560000
+          },
+          "remote_jobs": {
+            "min_income": 9500,
+            "median_income": 14000,
+            "max_income": 19000
+          }
+        }
+      },
+      "market_trend": {
+        "trend": "growing",
+        "reason": "The demand for ML Engineers is increasing due to the growth in AI and data-driven applications."
+      },
+      "top_employers": [
+        "Yandex",
+        "Mail.ru Group",
+        "SberAI",
+        "Alphabet Inc.",
+        "Microsoft"
+      ]
+    }
+  },
+  "career_advisor": {
+    "agent": "CareerAdvisor",
+    "generated_at": "2026-04-03T18:18:05.340598+00:00",
+    "data": {
+      "learning_path": [
+        {
+          "stage": "Foundation",
+          "topics": [
+            {
+              "theme": "Introduction to Python",
+              "resources": [
+                {
+                  "name": "Automate the Boring Stuff with Python",
+                  "type": "book"
+                },
+                {
+                  "name": "Python Programming on Win10",
+                  "type": "course"
+                }
+              ]
+            },
+            {
+              "theme": "TensorFlow fundamentals for data science",
+              "resources": [
+                {
+                  "name": "TensorFlow 2.0 Tutorials",
+                  "type": "tutorial"
+                },
+                {
+                  "name": "Deep Learning with Python by Francois Chollet",
+                  "type": "book"
+                }
+              ]
+            }
+          ],
+          "milestone": "Be able to build and train basic models in TensorFlow using Python."
+        },
+        {
+          "stage": "Practice",
+          "topics": [
+            {
+              "theme": "Advanced data handling with Pandas",
+              "resources": [
+                {
+                  "name": "Pandas Foundations by Wes McKinney",
+                  "type": "course"
+                },
+                {
+                  "name": "pandas.pydata.org documentation",
+                  "type": "documentation"
+                }
+              ]
+            },
+            {
+              "theme": "Developing a data pipeline with AWS Sagemaker",
+              "resources": [
+                {
+                  "name": "Building Machine Learning Pipelines Using Amazon SageMaker",
+                  "type": "tutorial"
+                },
+                {
+                  "name": "AWS documentation for SageMaker",
+                  "type": "documentation"
+                }
+              ]
+            }
+          ],
+          "milestone": "Create and deploy a machine learning model on AWS Sagemaker."
+        },
+        {
+          "stage": "Portfolio",
+          "topics": [
+            {
+              "theme": "Building an AI project with PyTorch",
+              "resources": [
+                {
+                  "name": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow - Chapter 6",
+                  "type": "book"
+                },
+                {
+                  "name": "PyTorch official documentation and tutorials by PyTorch team",
+                  "type": "documentation"
+                }
+              ]
+            },
+            {
+              "theme": "Collaborative learning using Qdrant for retrieval",
+              "resources": [
+                {
+                  "name": "Qdrant documentation",
+                  "type": "documentation"
+                },
+                {
+                  "name": "Embedding Similarity Search with QDRANT and Chromadb",
+                  "type": "tutorial"
+                }
+              ]
+            }
+          ],
+          "milestone": "Deliver a complete project showcasing advanced techniques in AI."
+        }
+      ],
+      "gap_analysis": {
+        "quick_wins": [
+          {
+            "skill": "vLLM for model deployment",
+            "description": "Understand how to use vLLM Production Stack for efficient serving of large language models"
+          },
+          {
+            "skill": "Basic Machine Learning with Scikit-learn",
+            "description": "Implement and evaluate basic ML algorithms such as decision trees, random forests, and support vector machines (SVM)"
+          }
+        ],
+        "long_term": [
+          {
+            "skill": "Advanced Natural Language Processing",
+            "description": "Develop expertise in state-of-the-art NLP techniques including transfer learning and fine-tuning for different tasks"
+          },
+          {
+            "skill": "Cloud engineering using AWS or Azure ML",
+            "description": "Design, implement, and manage machine learning workflows on cloud platforms such as AWS Sagemaker or Azure Machine Learning Service with a deep understanding of best practices and security considerations"
+          }
+        ]
+      },
+      "portfolio_project": {
+        "title": "Smart Financial Advisor System",
+        "description": "Develop an intelligent financial advisor chatbot that can answer users' queries, provide investment advice, and monitor portfolios.",
+        "skills_demonstrated": [
+          "TensorFlow",
+          "Qdrant",
+          "Python"
+        ]
+      }
+    }
+  },
+  "critic_verifier": {
+    "agent": "CriticVerifier",
+    "generated_at": "2026-04-03T18:18:25.379130+00:00",
+    "data": {
+      "score": {
+        "quality_index": 85,
+        "reason": "The skill demand matches salary ranges, though some resources in learning_path might be less relevant."
+      },
+      "is_consistent": true,
+      "warnings": [
+        {
+          "field": "career_plan.portfolio_project.skills_demonstrated",
+          "severity": "minor",
+          "message": "Skills demonstrated do not fully align with the skill_map, missing 'Julia' and 'PyTorch'."
+        }
+      ]
+    }
+  }
+}
