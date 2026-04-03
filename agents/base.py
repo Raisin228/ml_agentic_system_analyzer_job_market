@@ -51,7 +51,6 @@ class BaseAgent(ABC):
             mode=instructor.Mode.JSON
         )
 
-    @property
     @abstractmethod
     def system_prompt(self):
         """Системный промпт c ролью и заданием для агента."""
@@ -83,7 +82,7 @@ class BaseAgent(ABC):
 
         return response
 
-    def run(self, input_data: str | Json) -> dict | Exception:
+    def run(self, input_data: str | dict) -> dict | Exception:
         """
         Механизм для запуска агентов.
 
@@ -107,9 +106,12 @@ class BaseAgent(ABC):
             try:
                 response = self.call_llm(prompt)
                 logger.info(
-                    f"[{self.agent_name}] Успешная попытка. \n data = {
-                    json.dumps(response.model_dump(), indent=2, ensure_ascii=False)
-                    }"
+                    f"[{self.agent_name}] Успешная попытка.\n"
+                    f"generated_at: {datetime.now(tz=UTC).isoformat()}\n"
+                    f"data = {
+                        json.dumps(response.model_dump(), indent=2, ensure_ascii=False)
+                    }\n"
+                    f"====================="
                 )
                 return {
                     "agent": self.agent_name,

@@ -5,11 +5,12 @@ from models.market_analyst_resp import MarketAnalizerResponse
 
 
 class MarketAnalyst(BaseAgent):
+
     def __init__(self) -> None:
         """Инициализатор."""
         super().__init__(MarketAnalizerResponse, name="MarketAnalyst")
 
-    def build_prompt(self, input_data: str) -> str:
+    def build_prompt(self, input_data: str | dict) -> str:
         """
         Пользовательский промпт.
 

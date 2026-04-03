@@ -10,7 +10,7 @@ class SalaryEstimator(BaseAgent):
         """Инициализатор."""
         super().__init__(SalaryExpectations, name="SalaryEstimator")
 
-    def build_prompt(self, input_data: dict) -> str:
+    def build_prompt(self, input_data: str | dict) -> str:
         """
         Промпт задание.
 
