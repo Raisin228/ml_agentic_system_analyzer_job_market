@@ -1,6 +1,7 @@
 """Базовая логика для работы Агентов. Атрошенко Б. С."""
 
 import os
+import json
 
 import logging
 from abc import ABC, abstractmethod
@@ -15,7 +16,9 @@ from consts import AvailableModels
 load_dotenv()
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(
+    level=logging.INFO, handlers=[logging.StreamHandler(), logging.FileHandler("run.log", mode='w')]
+)
 logging.getLogger("openai").setLevel(logging.WARNING)
 logging.getLogger("httpcore").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -54,12 +57,12 @@ class BaseAgent(ABC):
         """Системный промпт c ролью и заданием для агента."""
 
     @abstractmethod
-    def build_prompt(self, input_data: str | Json) -> str:
+    def build_prompt(self, input_data: str | dict) -> str:
         """
         Подготавливает итоговый промпт для вызова LLM.
 
         :param input_data: для первого агента это строка с названием должности,
-        для следующих это JSON от прошлого агента.
+        для следующих это dict от прошлого агента.
         :return строка с ответом.
         """
 
@@ -97,13 +100,17 @@ class BaseAgent(ABC):
             prompt: str = user_prompt
             if last_wrong:
                 prompt += (
-                    f"Прошлый ответ не прошёл валидацию по схеме Pydantic. {last_wrong}"
-                    f"Перегенерируй ответ так чтоб он удовлетворял модели ответа."
+                    f"The previous response failed Pydantic schema validation. {last_wrong}"
+                    f"Regenerate the response so that it satisfies the response model."
                 )
 
             try:
                 response = self.call_llm(prompt)
-                logger.info(f"[{self.agent_name}] Успешная попытка. {response}")
+                logger.info(
+                    f"[{self.agent_name}] Успешная попытка. \n data = {
+                    json.dumps(response.model_dump(), indent=2, ensure_ascii=False)
+                    }"
+                )
                 return {
                     "agent": self.agent_name,
                     "generated_at": datetime.now(tz=UTC).isoformat(),

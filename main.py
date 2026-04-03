@@ -3,6 +3,7 @@
 import argparse
 
 from agents.market_analyst_a1 import MarketAnalyst
+from agents.salary_estimator_a2 import SalaryEstimator
 
 
 def parse_args() -> argparse.Namespace:
@@ -19,5 +20,6 @@ def parse_args() -> argparse.Namespace:
 
 if __name__ == "__main__":
     args = parse_args()
-    agent = MarketAnalyst()
-    print(agent.run("Python Backend Dev"))
+    agent1_resp: dict = MarketAnalyst().run("Python Backend Dev")
+
+    agent2_resp = SalaryEstimator().run(agent1_resp.get('data'))
