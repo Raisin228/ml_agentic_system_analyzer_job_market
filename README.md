@@ -1,4 +1,12 @@
-# 🤖 Job Market Analyzer — Multi-Agent System
+<a href="https://github.com/Raisin228/ml_agentic_system_analyzer_job_market">
+  <img src="https://github.com/Raisin228/ml_agentic_system_analyzer_job_market/blob/main/photos/agent.png" width="80" align="left" style="margin-right: 12px;" />
+</a>  
+
+
+
+#  Job Market Analyzer — Multi-Agent System
+
+<br clear="left"/>
 
 > Многоагентная система анализа IT-рынка труда на базе локальных LLM (Ollama | qwen2.5:7B).  
 > Вводишь название должности — получаешь полный карьерный отчёт: карту навыков, зарплатные вилки, план развития и оценку качества.
